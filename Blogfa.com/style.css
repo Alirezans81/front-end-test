@@ -1,0 +1,57 @@
+.header-div{
+    background-image: url(./Images/backpattern.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 90px;
+    padding-bottom: 60px;
+}
+
+.header-div-btns{
+    background-color: #2196f3;
+    font-size: small;
+    font-weight: bold;
+    width: 140px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.top-label-a{
+    color: #0288d1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -60%);
+}
+
+.top-label-a:hover{
+    text-decoration: none;
+    color: #006da7;
+}
+
+.devider{
+    height: .5px;
+    background-color: rgb(242, 242, 242);
+}
+
+.card{
+    border: none;
+}
+
+.card-body{
+    background-color: #f4f5f8;
+    border-radius: 3px;
+}
+
+.card-title{
+    color: #333333;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.card-title:hover{
+    color: #01579b;
+    text-decoration: none;
+}
+
+.card-text{
+    font-size: small;
+}

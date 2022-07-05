@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Changing USD/IRR</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- My Style -->
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+  <div class=""></div>
+  <div class="body bg-dark d-flex justify-content-center align-items-center">
+    <div class="wallet-content bg-white  d-flex flex-column align-items-center p-5">
+        <form name="frmChange" class="" method="post" action="./contact.php">
+            <div class="wallet-header">
+                <h3>Changing USD/IRR</h3>
+            </div>
+            <div class="fiat-select-div w-100 mt-5 row py-2">
+                <div class="col-4">
+                    <select class="fiat-select" name="Fiat" id="fiatSelect" onchange="typeChanged()">
+                        <option class="d-flex justify-content-center align-items-center" value="USDtoIRR" name="type">USD to IRR</option>
+                        <option class="d-flex justify-content-center align-items-center" value="IRRtoUSD" name="type">IRR to USD</option>
+                    </select>
+                </div>
+                <div class="col-8 row">
+                    <div class="col-6 w-100 d-flex flex-column">
+                        <input class="input py-2 w-100" id="amount" name="amount" type="text" placeholder="Amount">
+                        <span class="input-span mt-1">of USD</span>
+                    </div>
+                    <div class="col-6 w-100">
+                        <input class="input py-2 w-100" id="price" name="price" type="text" placeholder="Price">
+                        <span class="input-span mt-1">USD per IRR</span>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100 mt-2 d-flex">
+                <input class="input py-2" type="text" id="phoneNumber" name="phoneNumber" placeholder="Phone Number">
+            </div>
+            <div class="input-div mt-3 w-100">
+            </div>
+            <div class="buttons-div w-100 row mt-2 mx-0">
+                <input class="buttons col-md-12 mt-3 btn btn-success py-2" type="submit" value="Change Request">
+            </div>     
+        </form>
+    </div>
+  </div>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- My Script -->
+    <script src="./script.js"></script>
+  </body>
+</html>

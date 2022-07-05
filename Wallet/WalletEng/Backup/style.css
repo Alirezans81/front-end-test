@@ -1,0 +1,42 @@
+.body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, Geneva, Tahoma, sans-serif;
+}
+
+.wallet-content {
+    width: 600px;
+    height: fit-content;
+    border-radius: 7px;
+}
+
+@media screen and (max-width: 767px) {
+    .wallet-content {
+        width: 75%;
+    }
+}
+
+.fiat-select {
+    border: none;
+    outline: none;
+    height: 50px;
+    width: auto;
+}
+
+.flag {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    image-resolution: 1000px 1000px;
+}
+
+.input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgba(110, 110, 110, 0.63);
+}
+
+.input-span {
+    font-size: 12px;
+    color: rgb(0, 0, 0,);
+}

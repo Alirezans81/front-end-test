@@ -1,0 +1,52 @@
+body {
+    min-height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.content {
+    width: 600px;
+    border-radius: 3px;
+    box-shadow: rgba(77, 77, 77, 0.5) 1px 0px 10px 1px;
+}
+
+@media screen and (max-width: 767px) {
+    .content {
+        width: 75%;
+    }
+}
+
+.image-div {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    height: 150px;
+    background-image: url(./image.jpeg);
+    background-size: cover;
+}
+
+.header {
+    font-weight: bold;
+}
+
+.my-border-bottom {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    transition: all 500ms;
+}
+
+.my-border-bottom:focus {
+    border-bottom: 2px solid rgba(0, 174, 255, 0.349);
+}
+
+.my-color {
+    color: #757575;
+}
+
+.calender-icon {
+    color: rgb(110, 110, 110)
+}
+
+.submit-button {
+    font-size: 13px;
+    font-weight: bold;
+}

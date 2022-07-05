@@ -1,0 +1,46 @@
+body {
+    background: fixed linear-gradient(45deg, rgb(253 43 120), rgb(109 64 119) 80%);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #555;
+}
+
+.hole-div{
+    box-shadow: 1px 3px 10px 5px rgba(0, 0, 0, 0.253);
+    width: 600px;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 767px) {
+    .hole-div{
+        z-index: 1;
+        width: 75%;
+        position: static;
+        left: 0px;
+        top: 0px;
+        transform: translate(0%, 0%);
+    }
+
+    .submit-button {
+        width: 90px;
+    }
+}
+
+.lables-inputs {
+    font-size: 17px;
+}
+
+.inputs {
+    border: none;
+    background-color: rgba(230, 230, 230, 0.3);
+    outline-color: rgba(255, 102, 0, 0.308);
+    border-radius: 3px;
+    border: 3px solid rgb(230, 230, 230);
+    border-left: 1px solid rgb(221, 221, 221);
+    border-bottom: 1px solid rgb(221, 221, 221);
+    color: rgb(117, 117, 117);
+}

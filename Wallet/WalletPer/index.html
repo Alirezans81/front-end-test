@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- My Style -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .body {
+            width: 100%;
+            height: 100vh;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, Geneva, Tahoma, sans-serif;
+        }
+        
+        .wallet-content {
+            width: 600px;
+            height: fit-content;
+            border-radius: 7px;
+        }
+        
+        @media screen and (max-width: 767px) {
+            .wallet-content {
+                width: 75%;
+            }
+        }
+        
+        .fiat-select {
+            border: none;
+            outline: none;
+            height: 50px;
+            width: auto;
+        }
+        
+        .flag {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            image-resolution: 1000px 1000px;
+        }
+        
+        .input {
+            border: none;
+            outline: none;
+            border-bottom: 1px solid rgba(110, 110, 110, 0.63);
+        }
+    </style>
+  </head>
+  <body>
+  <div class="body bg-dark d-flex justify-content-center align-items-center">
+    <div class="wallet-content bg-white d-flex flex-column align-items-center p-5">
+        <form action="">
+            <div class="wallet-header text-right w-100">
+                <h3>تبدیل دلار/تومان</h3>
+            </div>
+            <div class="fiat-select-div w-100 mt-5 row py-2 d-flex flex-row-reverse justify-content-between">
+                <div class="col-2">
+                    <select class="fiat-select" name="Fiat" id="fiatSelect" onchange="typeChanged()">
+                        <option class="d-flex justify-content-center align-items-center" value="USDtoIRR">دلار به ریال</option>
+                        <option class="d-flex justify-content-center align-items-center" value="IRRtoUSD">ریال به دلار</option>
+                    </select>
+                </div>
+                <div class="col-10 row">
+                    <div class="col-6 w-100">
+                        <input class="input py-2 w-100 text-right" id="amount" type="text" placeholder="مقدار">
+                    </div>
+                    <div class="col-6 w-100">
+                        <input class="input py-2 w-100 text-right" id="price" type="text" placeholder="قیمت">
+                    </div>
+                </div>
+            </div>
+            <div class="w-100 mt-2 d-flex flex-row-reverse">
+                <input class="input py-2 text-right" type="text" placeholder="شماره موبایل">
+            </div>
+            <div class="input-div mt-3 w-100">
+            </div>
+            <div class="buttons-div w-100 row mt-2 mx-0">
+                <input class="buttons col-md-12 mt-3 btn btn-success py-2" type="submit" value="ثبت درخواست تبدیل">
+            </div>     
+        </form>
+    </div>
+  </div>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- My Script -->
+    <script>
+        var sel = document.getElementById('fiatSelect');
+        var opt = sel.options[sel.selectedIndex];
+
+        function typeChanged() {
+            if (sel.value == "USD") {
+                document.getElementById('type1').textContent = "USD";
+                document.getElementById('type2').textContent = "USD";
+                document.getElementById('flagImg').src = './moneySymbols/USD.png';
+            }
+            else if (sel.value == "CAD") {
+                document.getElementById('type1').textContent = "CAD";
+                document.getElementById('type2').textContent = "CAD";
+                document.getElementById('flagImg').src = './moneySymbols/USD.png';
+            }
+            else if (sel.value == "EUR") {
+                document.getElementById('type1').textContent = "EUR";
+                document.getElementById('type2').textContent = "EUR";
+                document.getElementById('flagImg').src = './moneySymbols/EURO.png';
+            }
+            else if (sel.value == "IRR") {
+                document.getElementById('type1').textContent = "IRR";
+                document.getElementById('type2').textContent = "IRR";
+                document.getElementById('flagImg').src = './moneySymbols/IRR.png';
+            }
+            else if (sel.value == "AFN") {
+                document.getElementById('type1').textContent = "AFN";
+                document.getElementById('type2').textContent = "AFN";
+                document.getElementById('flagImg').src = './moneySymbols/AFN.png';
+            }
+            else if (sel.value == "TLR") {
+                document.getElementById('type1').textContent = "TLR";
+                document.getElementById('type2').textContent = "TLR";
+                document.getElementById('flagImg').src = './moneySymbols/TLR.png';
+            }
+        }
+    </script>
+  </body>
+</html>
